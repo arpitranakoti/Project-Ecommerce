@@ -1,0 +1,48 @@
+[
+    {
+        "id":"c1",
+        "name":"cargosoned-youth-bowling-shirt",
+        "price":200,
+        "img":"./cargo_img/c1.webp",
+        "subimg1":"./cargo_img/c1b.webp",
+        "subimg2":"./cargo_img/c1b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "cargos"
+    },
+    {
+        "id":"c2",
+        "name":"cargo2",
+        "price":200,
+        "img":"./cargo_img/c2.webp",
+        "subimg1":"./cargo_img/c2.webp",
+        "subimg2":"./cargo_img/c2c.webp",
+        "subimg3":"",
+   
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "cargos"
+    },
+    {
+        "id":"c3",
+        "name":"cargo3",
+        "price":200,
+        "img":"./cargo_img/c3.webp",
+        "subimg1":"./cargo_img/c3.webp",
+        "subimg2":"./cargo_img/c3b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "cargos"
+    },
+    {
+        "id":"c4",
+        "name":"cargo4",
+        "price":200,
+        "img":"./cargo_img/c4.webp",
+        "subimg1":"./cargo_img/c4.webp",
+        "subimg2":"./cargo_img/c4b.webp",
+        "subimg3":"./cargo_img/c4c.webp",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "cargos"
+    }
+    
+]

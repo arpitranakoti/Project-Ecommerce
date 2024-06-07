@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign in</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        .form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+    
+        .form input[type="email"],
+        .form input[type="password"] {
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        .form input[type="submit"] {
+            width: calc(100% - 20px);
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        .form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    
+        .form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    
+        .form a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    
+        .form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form" action="signin.html">
+        <!-- email -->
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="write your email" />
+            <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+        </div>
+        <div class="pass">
+            <!-- password -->
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="password" placeholder="password" />
+        </div>
+        <!-- button -->
+        <input type="submit" onclick="signin()" value="signIn" id="signin-btn">
+        <!-- <button id="signin-btn" onclick="signin()" >Sign in</button> -->
+    </div>
+    <script src="main.js">
+
+    </script>
+</body>
+
+</html>

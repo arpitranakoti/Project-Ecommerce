@@ -1,0 +1,91 @@
+[
+    {
+        "id":1,
+        "name":"poisoned youth bowlingshirt",
+        "price":200,
+        "img":"./collection_img/s1.webp",
+        "subimg1":"./collection_img/s1.webp",
+        "subimg2":"./collection_img/s1b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":2,
+        "name":"pro2",
+        "price":200,
+        "img":"./collection_img/s2.webp",
+        "subimg1":"./collection_img/s2.webp",
+        "subimg2":"./collection_img/s2b.webp",
+        "subimg3":"./collection_img/s2c.webp",
+   
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":3,
+        "name":"pro3",
+        "price":200,
+        "img":"./collection_img/s3.webp",
+        "subimg1":"./collection_img/s3.webp",
+        "subimg2":"./collection_img/s3b.webp",
+        "subimg3":"./collection_img/s3c.webp",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":4,
+        "name":"pro4",
+        "price":200,
+        "img":"./collection_img/s4.webp",
+        "subimg1":"./collection_img/s4.webp",
+        "subimg2":"./collection_img/s4b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":5,
+        "name":"pro5",
+        "price":200,
+        "img":"./collection_img/s5a.png",
+        "subimg1":"./collection_img/s5a.png",
+        "subimg2":"./collection_img/s5b.png",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":6,
+        "name":"pro6",
+        "price":200,
+        "img":"./collection_img/s6.webp",
+        "subimg1":"./collection_img/s6.webp",
+        "subimg2":"./collection_img/s6b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":7,
+        "name":"pro7",
+        "price":200,
+        "img":"./collection_img/s7.webp",
+        "subimg1":"./collection_img/s7.webp",
+        "subimg2":"./collection_img/s7b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    },
+    {
+        "id":8,
+        "name":"pro8",
+        "price":200,
+        "img":"./collection_img/s8.webp",
+        "subimg1":"./collection_img/s8.webp",
+        "subimg2":"./collection_img/s8b.webp",
+        "subimg3":"",
+        "description":"Basically, Flex. Presenting basic heavyweight T-Shirt with a round, rib-trimmed neckline and a straight-cut hem. Oversized fit for a baggy, drop shoulder silhouette.",
+        "category": "feature"
+    }
+]

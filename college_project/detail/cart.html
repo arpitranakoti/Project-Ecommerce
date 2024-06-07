@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/212c4432d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="header">
+        <div id="mobile">
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">
+            <a href="../index.html"><img src="../nav_img/wtf_logo.webp" alt=""></a>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li>
+                    <a href=""><img src="../nav_img/Tshirt.webp" alt=""></a>
+                    <h3>Oversized T-shirts</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/bottom_trend.webp" alt=""></a>
+                    <h3>Bottom Trend</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/bowling_shirts.webp" alt=""></a>
+                    <h3>Bowling Shirts</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/winter_essential.webp" alt=""></a>
+                    <h3>Winter Essential</h3>
+                </li>
+                <li>
+                    <a href="../contact/contact.html"><img src="../nav_img/contactUs.avif" alt=""></a>
+                    <h3>Contact Us</h3>
+                </li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-summary">
+                <h2>Total: RS <span id="cart-total">0.00</span></h2>
+                <button id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            function loadCart() {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cartItemsContainer.innerHTML = '';
+                let total = 0;
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                } else {
+                    cart.forEach(item => {
+                        total += item.price * item.quantity;
+                        let cartItem = document.createElement('div');
+                        cartItem.classList.add('cart-item');
+                        cartItem.innerHTML = `
+                            <img src=".${item.img}" alt="${item.name}">
+                            <div class="cart-item-info">
+                                <h3>${item.name}</h3>
+                                <p>$${item.price} x ${item.quantity}</p>
+                                <button class="remove-item" data-id="${item.id}">Remove</button>
+                            </div>
+                        `;
+                        cartItemsContainer.appendChild(cartItem);
+                    });
+                }
+
+                cartTotalElement.innerText = total.toFixed(2);
+                localStorage.setItem('cartTotal', total);
+
+                // Attach remove item event listeners
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        let id = e.target.getAttribute('data-id');
+                        removeFromCart(id);
+                    });
+                });
+            }
+
+            function removeFromCart(id) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.id != id);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCart();
+            }
+
+            checkoutBtn.addEventListener('click', () => {
+                window.location.href = 'payment.html';
+            });
+
+            loadCart();
+        });
+    </script>
+</body>
+</html>

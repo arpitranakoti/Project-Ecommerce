@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/212c4432d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="header">
+        <div id="mobile">
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">
+            <a href="../index.html"><img src="../nav_img/wtf_logo.webp" alt=""></a>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li>
+                    <a href=""><img src="../nav_img/Tshirt.webp" alt=""></a>
+                    <h3>Oversized T-shirts</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/bottom_trend.webp" alt=""></a>
+                    <h3>Bottom Trend</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/bowling_shirts.webp" alt=""></a>
+                    <h3>Bowling Shirts</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/winter_essential.webp" alt=""></a>
+                    <h3>Winter Essential</h3>
+                </li>
+                <li>
+                    <a href="../contact/contact.html"><img src="../nav_img/contactUs.avif" alt=""></a>
+                    <h3>Contact Us</h3>
+                </li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </section>
+
+    <section class="payment-section">
+        <div class="container">
+            <h1>Secure Checkout</h1>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <button type="button" id="card-btn" class="payment-btn active">
+                        <i class="fa-solid fa-credit-card"></i> Card
+                    </button>
+                </div>
+                <div class="payment-method">
+                    <button type="button" id="upi-btn" class="payment-btn">
+                        <i class="fa-solid fa-mobile-alt"></i> UPI
+                    </button>
+                </div>
+            </div>
+            <form id="payment-form">
+                <div id="card-form" class="payment-details active">
+                    <div class="input-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="card-expiry">Expiry Date</label>
+                        <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" placeholder="123" required>
+                    </div>
+                </div>
+                <div id="upi-form" class="payment-details">
+                    <div class="input-group">
+                        <label for="upi-id">UPI ID</label>
+                        <input type="text" id="upi-id" placeholder="example@upi" required>
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="order-items"></div>
+                    <p>Shipping - FREE</p>
+                    <p>Sales Tax - <span id="sales-tax"></span></p>
+                    <h3>Order Total - <span id="order-total"></span></h3>
+                </div>
+                <button type="submit" id="pay-btn">Pay Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const paymentForm = document.getElementById('payment-form');
+            const cardForm = document.getElementById('card-form');
+            const upiForm = document.getElementById('upi-form');
+            const cardBtn = document.getElementById('card-btn');
+            const upiBtn = document.getElementById('upi-btn');
+            const orderItems = document.getElementById('order-items');
+            const orderTotalElement = document.getElementById('order-total');
+            const salesTaxElement = document.getElementById('sales-tax');
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartTotal = JSON.parse(localStorage.getItem('cartTotal')) || 0;
+            const salesTax = (cartTotal * 0.13).toFixed(2);
+            const orderTotal = (cartTotal + parseFloat(salesTax)).toFixed(2);
+
+            cart.forEach(item => {
+                let itemElement = document.createElement('p');
+                itemElement.innerText = `${item.quantity} x ${item.name} - RS ${item.price}`;
+                orderItems.appendChild(itemElement);
+            });
+
+            salesTaxElement.innerText = `RS ${salesTax}`;
+            orderTotalElement.innerText = `RS ${orderTotal}`;
+
+            cardBtn.addEventListener('click', () => {
+                cardForm.style.display = 'block';
+                upiForm.style.display = 'none';
+                cardBtn.classList.add('active');
+                upiBtn.classList.remove('active');
+            });
+
+            upiBtn.addEventListener('click', () => {
+                cardForm.style.display = 'none';
+                upiForm.style.display = 'block';
+                cardBtn.classList.remove('active');
+                upiBtn.classList.add('active');
+            });
+
+            paymentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const isCardActive = cardBtn.classList.contains('active');
+
+  if (isCardActive) {
+    const cardNumber = document.getElementById('card-number').value;
+    const cardExpiry = document.getElementById('card-expiry').value;
+    const cardCvc = document.getElementById('card-cvc').value;
+
+    // Validate card details (**add validation logic here**):
+   
+    if (cardNumber && cardExpiry && cardCvc) {
+      // Simulate successful card payment
+      localStorage.removeItem('cart');
+      localStorage.removeItem('cartTotal');
+      alert('Payment Successful!');
+      window.location.href = 'confirmation.html'; // Redirect to confirmation page
+    } 
+    else {
+      alert('Please fill in all card details.');
+    }
+  } else {
+    const upiId = document.getElementById('upi-id').value;
+    if (upiId) {
+      localStorage.removeItem('cart');
+      localStorage.removeItem('cartTotal');
+      alert('Payment Successful!');
+      window.location.href = 'confirmation.html'; // Redirect to confirmation page
+    } else {
+      alert('Please fill in your UPI ID.');
+    }
+  }
+});
+
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const paymentForm = document.getElementById('payment-form');
+            const cardForm = document.getElementById('card-form');
+            const upiForm = document.getElementById('upi-form');
+            const cardBtn = document.getElementById('card-btn');
+            const upiBtn = document.getElementById('upi-btn');
+            const orderItems = document.getElementById('order-items');
+            const orderTotalElement = document.getElementById('order-total');
+            const salesTaxElement = document.getElementById('sales-tax');
+    
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartTotal = JSON.parse(localStorage.getItem('cartTotal')) || 0;
+            const salesTax = (cartTotal * 0.13).toFixed(2);
+            const orderTotal = (cartTotal + parseFloat(salesTax)).toFixed(2);
+    
+            cart.forEach(item => {
+                let itemElement = document.createElement('p');
+                itemElement.innerText = `${item.quantity} x ${item.name} - RS ${item.price}`;
+                orderItems.appendChild(itemElement);
+            });
+    
+            salesTaxElement.innerText = `RS ${salesTax}`;
+            orderTotalElement.innerText = `RS ${orderTotal}`;
+    
+            cardBtn.addEventListener('click', () => {
+                cardForm.style.display = 'block';
+                upiForm.style.display = 'none';
+                cardBtn.classList.add('active');
+                upiBtn.classList.remove('active');
+            });
+    
+            upiBtn.addEventListener('click', () => {
+                cardForm.style.display = 'none';
+                upiForm.style.display = 'block';
+                cardBtn.classList.remove('active');
+                upiBtn.classList.add('active');
+            });
+    
+            paymentForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent default form submission behavior
+    
+                // Check which payment method is active
+                const isCardActive = cardBtn.classList.contains('active');
+    
+                if (isCardActive) {
+                    const cardNumber = document.getElementById('card-number').value;
+                    const cardExpiry = document.getElementById('card-expiry').value;
+                    const cardCvc = document.getElementById('card-cvc').value;
+    
+                    // Validate card details (add validation logic here):
+                    if (cardNumber && cardExpiry && cardCvc) {
+                        // Simulate successful card payment
+                        localStorage.removeItem('cart');
+                        localStorage.removeItem('cartTotal');
+                        alert('Payment Successful!');
+                        window.location.href = 'confirmation.html'; // Redirect to confirmation page
+                    } else {
+                        alert('Please fill in all card details.');
+                    }
+                } else {
+                    const upiId = document.getElementById('upi-id').value;
+                    if (upiId) {
+                        // Simulate successful UPI payment
+                        localStorage.removeItem('cart');
+                        localStorage.removeItem('cartTotal');
+                        alert('Payment Successful!');
+                        window.location.href = 'confirmation.html'; // Redirect to confirmation page
+                    } else {
+                        alert('Please fill in your UPI ID.');
+                    }
+                }
+            });
+    
+        });
+    </script>
+    
+    <script src="/navbar.js"></script>
+
+</body>
+</html>
+

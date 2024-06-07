@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="imageinfo.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../index.css">
+    <script src="https://kit.fontawesome.com/212c4432d3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section id="header">
+        <div id="mobile">
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">
+            <a href="#"><img src="../nav_img/wtf_logo.webp" alt=""></a>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li>
+                    <a href=""><img src="../nav_img/Tshirt.webp" alt=""></a>
+                    <h3>Oversized T-shirts</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/bottom_trend.webp" alt=""></a>
+                    <h3>Bottom Trend</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/bowling_shirts.webp" alt=""></a>
+                    <h3>Bowling Shirts</h3>
+                </li>
+                <li>
+                    <a href=""><img src="../nav_img/winter_essential.webp" alt=""></a>
+                    <h3>Winter Essential</h3>
+                </li>
+                <li>
+                    <a href="../contact/contact.html"><img src="../nav_img/contactUs.avif" alt=""></a>
+                    <h3>Contact Us</h3>
+                </li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+
+
+    </section>
+    <!-- <div class="container">
+        <div class="title">PRODUCT DETAIL</div>
+        <div class="detail">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                <div class="price"></div>
+                <div class="buttons">
+                    <button>Check Out</button>
+                    <button>Add To Cart
+                        <span>
+                            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 18 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+        <div class="title">Similar product</div>
+        <div class="listproduct"></div>
+    </div> -->
+    <section class="main">
+        <div class="mainproduct">
+            <!-- <div class="leftimage">
+                <div class="bigimg"><a href=""><img alt=""></a></div>
+                <div class="smallimgs">
+                    <div class="smallimgs1"></div>
+                    <div class="smallimgs2"></div>
+                    <div class="smallimgs3"></div>
+                </div>
+            </div> -->
+            <div class="left">
+                <div id="l_container">
+                    <div id="l_big">
+                        <img src="">
+                    </div>
+                    <div id="l_small_grp">
+                        <div class="l_smallimg">
+                            <img src="" alt="">
+                        </div>
+                        <div class="l_smallimg">
+                            <img src="" alt="">
+                        </div>
+                        <div class="l_smallimg">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightimage">
+                <!-- <div> -->
+                <div class="heading"></div>
+                <div class="price_sale">
+                    <div class="price"></div>
+                    <div class="sale"><span>sale</span>
+                    </div>
+                </div>
+                <div class="Shipping">
+                    <h4><a class="ship_a" href="">Shipping</a> calculated at checkout</h4>
+                </div>
+                <form id="productForm">
+                    <!-- Other product details here -->
+                    <div class="sizebox">
+                        <h4>Size</h4>
+                        <ul class="sizelist">
+                            <li class="size">
+                                <input type="radio" id="sizeS" name="size" value="S">
+                                <label for="sizeS">S</label>
+                            </li>
+                            <li class="size">
+                                <input type="radio" id="sizeM" name="size" value="M">
+                                <label for="sizeM">M</label>
+                            </li>
+                            <li class="size">
+                                <input type="radio" id="sizeL" name="size" value="L">
+                                <label for="sizeL">L</label>
+                            </li>
+                            <li class="size">
+                                <input type="radio" id="sizeXL" name="size" value="XL">
+                                <label for="sizeXL">XL</label>
+                            </li>
+                            <li class="size">
+                                <input type="radio" id="sizeXXL" name="size" value="XXL">
+                                <label for="sizeXXL">XXL</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                        <div class=" addtocart">
+                            <a href="javascript:void(0)" id="addToCart" class="btn add-to-cart" data-product-id="PRODUCT_ID_HERE">Add to Cart</a>
+
+                            <!-- <button id="addToCart" class="btn">Add to cart</button> -->
+                        </div>
+                </form>
+                
+                <div class="accordion">
+                    <div class="contentBx">
+                        <div class="label"><i class="ri-t-shirt-line"></i>Description</div>
+                        <div class="content content1">
+                            <p class="description">
+                            </p>
+                            <br><br>
+                            <p>
+                                What’s on print: Basically, Flex.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="label"><i class="ri-inbox-2-line"></i>Details</div>
+                        <div class="content content2">
+                            <p>
+                                -Unisex, Oversized Comfort Fit
+                                <br><br>
+                                -260 GSM Cotton Lycra
+                                <br><br>
+                                -High-Density HD Print
+                                <br><br>
+                                -Color: Blue
+                                <br><br>
+                                -Delivery: 5-7 days
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="label">Care Instructions</div>
+                        <div class="content content3">
+                            <p>
+                                -Machine Reverse Wash
+                                <br><br>
+                                -Reverse Iron Only
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </section>
+    <section class="other">
+        <div class="floating_container">
+            <div class="sticky">
+                <div class="sticky_element">
+                    <div class="sticky_price"></div>
+                    <span class="sticky_btn">
+                        <button id="stickyAddToCart">Add to cart</button>
+                    </span>
+                </div>
+            </div>
+            <div class="trust-container">
+                <div class="trustboxs">
+                    <div>
+                        <img src="cod.png" alt="">
+                    </div>
+                    <div>
+                        <p>COD Available</p>
+                    </div>
+                </div>
+                <div class="trustboxs">
+                    <div>
+                        <img src="truck.png" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            Delivery in 4-6 Days</p>
+                    </div>
+                </div>
+                <div class="trustboxs">
+                    <div>
+                        <img src="exchange.png" alt="">
+                    </div>
+                    <div>
+                        <p>Easy Exchange</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-wrapper">
+                <div class="title">
+                    <h1>People Also Buy</h1>
+                </div>
+                <div class="product-grid"></div>
+            </div>
+
+        </div>
+    </section>
+    <div class="footer">
+        <div class="footer1">
+            <div class="search">
+                <div class="search_email">
+                    <h2>Subscribe to our emails</h2>
+                    <label for="email">
+                        <div class="footer_mail">
+                            <input type="email" id="email" placeholder="Email" autocomplete="off">
+                            <button><i class="ri-arrow-right-line"></i></button>
+
+                        </div>
+                    </label>
+                </div>
+                <ul class="search_email_li">
+                    <li><a class="search_email_a" href=""><i class="ri-instagram-line"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="tnc">
+            <ul class="tnclist">
+                <li>
+                    <div> <a href="" class="tnc_anchor">© 2024 , WHAT THE FLEX</a></div>
+                </li>
+                <li>
+                    <div><a href="" class="tnc_anchor">Refund policy</a> </div>
+                </li>
+                <li>
+                    <div><a href="" class="tnc_anchor">Privacy policy</a> </div>
+                </li>
+                <li>
+                    <div><a href="" class="tnc_anchor">Terms of service</a></div>
+                </li>
+                <li>
+                    <div><a href="" class="tnc_anchor">Shipping policy</a> </div>
+                </li>
+                <li>
+                    <div><a href="" class="tnc_anchor">Contact information</a> </div>
+                </li>
+                <li>
+                    <div><a href="" class="tnc_anchor">Designed by Elanine Creatives</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+<script>
+        //get dates prod in products.json
+        let All_items = [];
+
+
+        Promise.all([
+            fetch("../features_Items.json").then(response => response.json()),
+            fetch("../cargos.json").then(response => response.json())
+        ])
+            .then(data => {
+                All_items = [...data[0], ...data[1]];
+                showDetail();
+            });
+
+    
+        function showDetail() {
+            let mainproduct = document.querySelector('.mainproduct');
+            let other = document.querySelector('.floating_container');
+            let l_smallimg = document.querySelectorAll('.l_smallimg');
+
+            let productId = new URLSearchParams(window.location.search).get('id');
+            let thisproduct = All_items.filter(value => {
+                return value.id == productId;
+            })[0];
+            ;
+            //if there is no product has id = productid
+            //=>return to home page
+            if (!thisproduct) {
+                window.location.href = "/";
+            }
+            /********************************** BIG IMG *************************************************/
+
+            mainproduct.querySelector('img').src = "." + thisproduct.img;// extra "." before product to get right path
+            mainproduct.querySelector('.heading').innerText = thisproduct.name;
+            mainproduct.querySelector('.price ').innerText = '$' + thisproduct.price;
+            other.querySelector('.sticky_price').innerText = '$' + thisproduct.price;
+            mainproduct.querySelector('.description').innerText = thisproduct.description;
+
+            /************************************** SUBLING IMG *****************************************/
+
+            // l_smallimg[0].querySelector('img').src="."+thisproduct.subimg1;
+
+            for (let num = 0; num < 3; num++) {
+
+                if (thisproduct[`subimg${num + 1}`] !== "")
+                    {
+                        l_smallimg[num].querySelector('img').src = "." + thisproduct[`subimg${num + 1}`];
+                    }
+                else 
+                    {
+                        l_smallimg[num].remove(); // Remove the div if the sub-image is empty or not found
+                    }
+            }
+            // l_smallimg.forEach((imgElem, index) => {
+            //     if (thisproduct[`subimg${index + 1}`]!=="") {
+            //         imgElem.querySelector('img').src = "."+thisproduct[`subimg${index + 1}`];
+            //     } 
+            //     else {
+            //         imgElem.remove(); // Remove the sibling div if the sub-image is not found
+            //     }
+            // });
+            console.log("hii2")
+
+            /**************************************** SIMILIAR PRODUCT *****************************************/
+
+
+            // show all product 
+            let product_grid = document.querySelector('.product-grid');
+            const maxItems = 3;
+            (All_items.filter(value => value.id != productId && value.category === thisproduct.category))
+                .slice(0, 4)
+                .forEach(product => {
+                    let newproduct = document.createElement('div');
+                    newproduct.classList.add('items');
+                    newproduct.innerHTML = `
+                    <div class="item-img">
+                        <a href=./imageinfo.html?id=${product.id} >
+                            <img src=".${product.img}">
+                        </a>
+                    </div>
+                    <h2 class="item-cost">${product.name}</h2>
+                    <div class="item-price">$${product.price}</div>
+                
+                `;
+                    product_grid.appendChild(newproduct);
+
+                });
+                 // Add to Cart functionality
+            document.getElementById('addToCart').addEventListener('click', () => addToCart(thisproduct));
+            document.getElementById('stickyAddToCart').addEventListener('click', () => addToCart(thisproduct));            
+        }
+
+        function addToCart(product) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let existingProduct = cart.find(item => item.id === product.id);
+
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push({ ...product, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Product added to cart!');
+
+        
+    }
+    
+    // Accordion functionality
+
+        const accordion = document.getElementsByClassName('contentBx');
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function () {
+                this.classList.toggle('active')
+            })
+        }
+</script>
+<script src="/navbar.js"></script>
+</body>
+
+</html>
