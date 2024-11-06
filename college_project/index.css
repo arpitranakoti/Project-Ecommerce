@@ -365,9 +365,10 @@ body {
      text-decoration: none; 
      list-style: none;
       display: grid;
-       grid-template-columns: repeat(4,380px);
+       /* grid-template-columns: repeat(4,380px); */
+       grid-template-columns: repeat(auto-fit, minmax(350px,400px));
         gap: 20px;
-         align-items: center;
+         /* align-items: center; */
           justify-content: center;
            /* margin-right: 50px; */
 }
@@ -413,7 +414,7 @@ li.shirt {
     margin-left: 10px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 200;
-    font-size: 22px;
+    font-size: 17px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -872,7 +873,7 @@ li.bottom_product {
 
 
 
-@media (max-width:799px) {
+@media (max-width:1000px) {
 
 
     #navbar {
@@ -907,10 +908,7 @@ li.bottom_product {
     }
 
     /************************collection ***************/
-    .collection ul {
-        grid-template-columns: repeat(2,350px);
-        gap: 20px;
-    }
+
     .photodiscip {
         width: 100%;
         margin-left: 0;
@@ -1030,10 +1028,7 @@ li.bottom_product {
     #header {
         padding: 10px 30px;
     }
-    .collection ul {
-        grid-template-columns: repeat(3,380px);
-       
-    }
+  
 }
 
 
